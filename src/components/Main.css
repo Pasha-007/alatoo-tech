@@ -14,8 +14,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  padding-top: 0px;
   border-bottom: 1px solid #ddd;
+}
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 nav .button {
@@ -23,6 +27,7 @@ nav .button {
   padding: 10px 20px;
   text-decoration: none;
   color: white;
+  border-radius: 10px;
 }
 
 .login {
@@ -33,21 +38,28 @@ nav .button {
   background-color: #6cbf76;
 }
 
+.profile {
+  background-color: #3498db;
+}
+
+.logout {
+  background-color: #e74c3c;
+}
+
 .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 100px;
-  margin: 50px 50px;
+  margin-top: 50px;
   text-align: left;
 }
 
 .content .text {
-  max-width: 50%;
+  max-width: 60%;
 }
 
 .content .image {
-  max-width: 50%;
+  max-width: 40%;
 }
 
 .content .image img {
@@ -62,5 +74,4 @@ nav .button {
 .content p {
   font-size: 18px;
   margin-top: 20px;
-  margin-right: 50px;
 }

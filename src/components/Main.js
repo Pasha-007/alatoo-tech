@@ -1,4 +1,3 @@
-// src/components/Main.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -19,7 +18,10 @@ const Main = () => {
         <div className="logo">ALA-TOO TECH</div>
         <nav>
           {user ? (
-            <button onClick={handleLogout} className="button logout">Log Out</button>
+            <>
+              <Link to="/profile" className="button profile">Profile</Link>
+              <button onClick={handleLogout} className="button logout">Log Out</button>
+            </>
           ) : (
             <>
               <Link to="/login" className="button login">Log In</Link>
