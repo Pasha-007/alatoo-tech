@@ -16,7 +16,7 @@ const Main = () => {
   return (
     <div className="main-container">
       <header>
-        <div className="logo">BILIM AI</div>
+        <div className="logo">ALA-TOO TECH</div>
         <nav>
           {user ? (
             <button onClick={handleLogout} className="button logout">Log Out</button>
