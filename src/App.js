@@ -6,13 +6,11 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Dashboard from './components/Dashboard';
 import PrivateRoute from './components/PrivateRoute';
-// import Navbar from './components/Navbar';
 
 const App = () => {
   return (
     <Router>
       <div>
-        {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/login" element={<Login />} />
