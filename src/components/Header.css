@@ -1,0 +1,49 @@
+/* src/components/Header.css */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    /* margin-bottom: 50px; */
+  }
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav .button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .login {
+    background-color: #f76c6c;
+  }
+  
+  .signup {
+    background-color: #6cbf76;
+  }
+  
+  .home,
+  .profile {
+    background-color: transparent;
+    color: black; /* Black font color */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    background-color: rgb(78, 78, 228);
+  }
+  
+  .logout {
+    background-color: #e74c3c;
+  }
+
+
+  

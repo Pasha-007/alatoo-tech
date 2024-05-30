@@ -1,7 +1,7 @@
 /* src/components/Main.css */
 .main-container {
   text-align: center;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .logo {
@@ -50,8 +50,9 @@ nav .button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   text-align: left;
+  margin: 30px;
 }
 
 .content .text {
@@ -74,4 +75,8 @@ nav .button {
 .content p {
   font-size: 18px;
   margin-top: 20px;
+}
+
+.home {
+  background-color: #3498db;
 }
