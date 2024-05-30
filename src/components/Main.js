@@ -2,7 +2,9 @@
 import React from 'react';
 // import Header from './Header';
 import './Main.css';
+import Courses from './Courses';
 import profileImage from '../assets/content_1.jpeg';
+
 
 const Main = () => {
   return (
@@ -19,6 +21,7 @@ const Main = () => {
           <img src={profileImage} alt="Profile" />
         </div>
       </section>
+      <Courses />
     </div>
   );
 };

@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <header>
-      <div className="logo">ALA-TOO TECH</div>
+      <Link to="/" className="logo">ALA-TOO TECH</Link>
       <nav>
         {user ? (
           <>
