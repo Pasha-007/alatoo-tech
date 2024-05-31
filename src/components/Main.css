@@ -80,3 +80,7 @@ nav .button {
 .home {
   background-color: #3498db;
 }
+
+.text p{
+  width: 80%;
+}

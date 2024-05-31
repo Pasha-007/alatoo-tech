@@ -1,0 +1,40 @@
+/* src/components/WhyATS.css */
+.whyATS {
+    max-width: 1280px;
+    margin: 40px auto; /* Added margin for spacing */
+    padding: 20px;
+  }
+  
+  .whyATS h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .whyGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns in the grid */
+    gap: 80px 40px; /* Adjusted gap between rows and columns */
+    justify-content: center; /* Align the grid horizontally to the center */
+    align-items: center; /* Align the grid vertically to the center */
+  }
+  
+  .whyelement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .whyATS h2 {
+    margin-bottom: 50px;
+  }
+  
+  .whyATS {
+    margin-bottom: 100px;
+  }
+  
+  .whyelement img,
+  .whyelement h3,
+  .whyelement p {
+    margin: 10px 0; /* Add margin between elements */
+  }
+  

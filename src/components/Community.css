@@ -1,0 +1,61 @@
+/* src/components/Community.css */
+.community {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1280px;
+  }
+  
+  .community-box {
+    background-color: #DCE6FD;
+    padding: 40px 40px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .community-text {
+    max-width: 50%;
+    text-align: left;
+  }
+  
+  .community-text h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    /* text-align: left; */
+  }
+  
+  .community-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    /* text-align: left; */
+  }
+  
+  .community-box button {
+    margin-top: 20px;
+    padding: 14px 100px;
+    background-color: #f4a53f;
+    border-radius: 20px;
+    width: auto;
+  }
+  
+  .community-box button:hover {
+    background-color: #f0c894;
+  }
+  
+  .community-img {
+    max-width: 50%;
+  }
+  
+  .community-img img {
+    width: 100%;
+    border-radius: 15px;
+  }
+  

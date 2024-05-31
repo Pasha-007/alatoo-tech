@@ -4,7 +4,9 @@ import React from 'react';
 import './Main.css';
 import Courses from './Courses';
 import profileImage from '../assets/content_1.jpeg';
-
+import WhyATS from './whyATS';
+import Community from './Community';
+import Footer from './Footer';
 
 const Main = () => {
   return (
@@ -22,6 +24,9 @@ const Main = () => {
         </div>
       </section>
       <Courses />
+      <WhyATS />
+      <Community />
+      <Footer />
     </div>
   );
 };
