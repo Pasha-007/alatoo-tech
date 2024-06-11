@@ -8,6 +8,7 @@ import WhyATS from './whyATS';
 import Community from './Community';
 import Footer from './Footer';
 
+
 const Main = () => {
   return (
     <div className="main-container">
@@ -26,6 +27,7 @@ const Main = () => {
       <Courses />
       <WhyATS />
       <Community />
+      
       <Footer />
     </div>
   );
