@@ -7,7 +7,6 @@ import profileImage from '../assets/content_1.jpeg';
 import WhyATS from './whyATS';
 import Community from './Community';
 import Footer from './Footer';
-import MyForm from './MyForm';
 
 
 const Main = () => {
@@ -28,7 +27,6 @@ const Main = () => {
       <Courses />
       <WhyATS />
       <Community />
-      <MyForm />
       <Footer />
     </div>
   );
