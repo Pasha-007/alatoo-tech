@@ -1,21 +1,22 @@
-// src/components/Signup.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { auth } from '../firebase';
 import './Signup.css'; // CSS for styling
 
 const Signup = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [isSigningIn, setIsSigningIn] = useState(false);
   const navigate = useNavigate();
+  const provider = new GoogleAuthProvider();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleGoogleSignIn = async () => {
+    if (isSigningIn) return;
+    setIsSigningIn(true);
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      navigate('/login');
+      await signInWithPopup(auth, provider);
+      navigate('/');
     } catch (error) {
+      setIsSigningIn(false);
       alert(error.message);
     }
   };
@@ -25,12 +26,10 @@ const Signup = () => {
       <div className="signup-form">
         <h1>ALA-TOO TECHNICAL SCHOOL</h1>
         <p>Sign up to have an account with us where you can get all the newest updates and information.</p>
-        <form onSubmit={handleSubmit}>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" />
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter your password" />
-          <button type="submit">Sign Up</button>
-          <p>Already have an account? <button onClick={() => navigate('/login')} style={{ color: 'blue', background: 'none', border: 'none', cursor: 'pointer' }}>Log In</button></p>
-        </form>
+        <button onClick={handleGoogleSignIn} disabled={isSigningIn}>
+          {isSigningIn ? 'Signing In...' : 'Sign up with Google'}
+        </button>
+        <p>Already have an account? <button onClick={() => navigate('/login')} style={{ color: 'blue', background: 'none', border: 'none', cursor: 'pointer' }}>Log In</button></p>
       </div>
     </div>
   );
