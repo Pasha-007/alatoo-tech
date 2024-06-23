@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { getDatabase, ref, push } from 'firebase/database';
+import { getDatabase, ref, push, set } from 'firebase/database';
 import { initializeApp } from 'firebase/app';
 import './MyForm.css';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../firebase';
 
 // Initialize Firebase (replace with your own config)
 const firebaseConfig = {
@@ -23,6 +25,8 @@ const firebaseConfig = {
       phoneNumber: '',
       dob: '',
     });
+    const [user] = useAuthState(auth);
+    const database = getDatabase();
   
     const handleChange = (e) => {
       const { name, value } = e.target;
@@ -31,9 +35,14 @@ const firebaseConfig = {
   
     const handleSubmit = async (e) => {
       e.preventDefault();
+      if (!user) {
+        alert('Please log in to submit your information.');
+        return;
+      }
+  
       try {
-        // Store form data in Firebase Realtime Database
-        await push(ref(database, 'submissions'), {
+        // Store form data in Firebase Realtime Database under the user's UID
+        await set(ref(database, `submissions/${user.uid}`), {
           name: formData.name,
           surname: formData.surname,
           phoneNumber: formData.phoneNumber,
